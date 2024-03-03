@@ -1,1 +1,3 @@
 03/03/2024 - added first revision of some Wi-Fi missions
+
+03/03/2024 - Turned off fan-control on V6 block on 2.4GHz live mission, so fan will always go at 100% - change if needed
