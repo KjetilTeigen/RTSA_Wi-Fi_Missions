@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission>
+    <General GUID="f814d615-a8e9-48ed-8c8a-e45c81dc55be" Version="RMIX_2016-09-30-1" Build="14869">
+        <Index>
+            <DateCreatedUTC Val="1700811387"/>
+            <BuildCreated Val="2.2.0.12821"/>
+            <DateSavedUTC Val="1709499916"/>
+            <BuildSaved Val="2.6.1.14869"/>
+            <SaveCompressed Val="0"/>
+            <MissionVersion Val="1.0"/>
+            <PreventShutdown Val="0"/>
+            <IsTXMission Val="0"/>
+            <BlockInfos>
+                <BlockInfo Factory="Factory_Spectrum" Name="Block_Spectrum_5" Title="Spectrum"/>
+                <BlockInfo Factory="Factory_Waterfall" Name="Block_Waterfall_5" Title="Waterfall"/>
+                <BlockInfo Factory="Factory_Histogram" Name="Block_Histogram_0" Title="Histogram"/>
+                <BlockInfo Factory="Factory_Waterfall_3D" Name="Block_Waterfall_3D_1" Title="Waterfall 3D"/>
+                <BlockInfo Factory="Factory_IQPowerSpectrum" Name="Block_IQPowerSpectrum_0" Title="IQ Power Spectrum"/>
+                <BlockInfo Factory="Factory_Spectran_V6B" Name="Block_Spectran_V6B_0" Title="SPECTRAN V6 PLUS"/>
+                <BlockInfo Factory="Factory_RF_Frontend" Name="HF_Path_0" Title="Calibration (ant. 30800)"/>
+                <BlockInfo Factory="Factory_Spectrum" Name="Block_Spectrum_5#SpectrumMarkers" Title="Spectrum - Spectrum Markers"/>
+                <BlockInfo Factory="Factory_Waterfall" Name="Block_Waterfall_5#WaterfallMarkers" Title="Waterfall - Waterfall Markers"/>
+            </BlockInfos>
+        </Index>
+        <ConfigItem Name="missionConfig" Class="group" Type="0">
+            <ConfigItem Name="general" Class="group" Type="0">
+                <ConfigItem Name="dateCreatedUTC" Class="float" Type="2" Val="1700811387"/>
+                <ConfigItem Name="buildCreated" Class="string" Type="3" Val="2.2.0.12821"/>
+                <ConfigItem Name="dateSavedUTC" Class="float" Type="2" Val="1709499916"/>
+                <ConfigItem Name="buildSaved" Class="string" Type="3" Val="2.6.1.14869"/>
+            </ConfigItem>
+        </ConfigItem>
+        <ConfigItem Name="rocManConfig" Class="group" Type="0">
+            <ConfigItem Name="rocAutoConnect" Class="bool" Type="6" Val="0"/>
+            <ConfigItem Name="rocItems" Class="group" Type="0"/>
+        </ConfigItem>
+        <ConfigItem Name="appBlockContainerDerivedFactoryConfig" Class="group" Type="0">
+            <DerivedFactories/>
+        </ConfigItem>
+    </General>
+    <Data>
+        <Bases>
+            <ChildBases>
+                <Base ClassName="SpectrumMarkers" ParentBlock="Block_Spectrum_5" GUID="e6221e3f-bad7-49a2-967d-ae0234348c58" Factory="Factory_Spectrum" Name="Block_Spectrum_5#SpectrumMarkers" Title="Spectrum - Spectrum Markers"/>
+                <Base ClassName="WaterfallMarkers" ParentBlock="Block_Waterfall_5" GUID="5c4a087b-b15c-4a6d-a20c-04e6b5a65d30" Factory="Factory_Waterfall" Name="Block_Waterfall_5#WaterfallMarkers" Title="Waterfall - Waterfall Markers"/>
+            </ChildBases>
+            <Base GUID="28324024-50f8-4ea4-8c0c-e275ba8fe553" Factory="Factory_BlockEditor" Name="Base_BlockEditor" Title="Blockgraph Editor" AppBlock="1"/>
+            <Base GUID="1bf7b8e2-6d9c-4065-9594-d02dad2b8fa5" Factory="Factory_ROC" Name="Base_ROC" Title="ROC" AppBlock="1"/>
+            <Base GUID="4046a07b-5c2c-40ed-98b6-d677d68ff3b3" Factory="Factory_HealthMonitor" Name="Base_HealthMonitor" Title="Health Monitor" AppBlock="1"/>
+            <Base GUID="06c60683-d012-4b08-935a-4e533e4f84eb" Factory="Factory_Spectrum" Name="Block_Spectrum_5" Title="Spectrum">
+                <ConfigItem Name="Block_Spectrum_5_config" Class="group" Type="0">
+                    <ConfigItem Name="main" Class="group" Type="0">
+                        <ConfigItem Name="compression" Class="float" Type="2" Val="1000"/>
+                    </ConfigItem>
+                    <ConfigItem Name="view" Class="group" Type="0">
+                        <ConfigItem Name="frequencystart" Class="float" Type="2" Val="2388639187.215365" SubUnitName="MHz"/>
+                        <ConfigItem Name="frequencyspan" Class="float" Type="2" Val="102719965.0473752" SubUnitName="MHz"/>
+                        <ConfigItem Name="axisScale" Class="group" Type="0">
+                            <ConfigItem Name="power" Class="group" Type="0">
+                                <ConfigItem Name="base" Class="float" Type="2" Val="0.2328432662072389"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                    </ConfigItem>
+                    <ConfigItem Name="tracelegend" Class="group" Type="0">
+                        <ConfigItem Name="placementx" Class="float" Type="2" Val="0.007312614470720291" SubUnitName="%"/>
+                        <ConfigItem Name="placementy" Class="float" Type="2" Val="0.01639344170689583" SubUnitName="%"/>
+                    </ConfigItem>
+                    <ConfigItem Name="traces" Class="group" Type="0">
+                        <ConfigItem Name="trace#clearwrite#624492392" Class="group" Type="0" Expanded="0"/>
+                        <ConfigItem Name="trace#maxhold#3538331292" Class="group" Type="0">
+                            <ConfigItem Name="visible" Class="bool" Type="6" Val="0"/>
+                            <ConfigItem Name="linewidth" Class="float" Type="2" Val="1.4"/>
+                            <ConfigItem Name="opacity" Class="float" Type="2" Val="0.21" SubUnitName="%"/>
+                        </ConfigItem>
+                        <ConfigItem Name="trace#average#4004966452" Class="group" Type="0"/>
+                        <ConfigItem Name="trace#periodbuffer#3410959160" Class="group" Type="0">
+                            <ConfigItem Name="color" Class="color" Type="11" Val="#ffffffff"/>
+                            <ConfigItem Name="linewidth" Class="float" Type="2" Val="0.4"/>
+                            <ConfigItem Name="opacity" Class="float" Type="2" Val="0.2" SubUnitName="%"/>
+                            <ConfigItem Name="limit" Class="integer" Type="1" Val="43"/>
+                            <ConfigItem Name="mergemode" Class="enum" Type="7" Val="1" SVal="blend" Names="decay,blend,sum,sum decay"/>
+                        </ConfigItem>
+                    </ConfigItem>
+                    <ConfigItem Name="markers" Class="group" Type="0">
+                        <ConfigItem Name="marker#3248359530" Class="group" Type="0">
+                            <ConfigItem Name="basefreq" Class="float" Type="2" Val="2439999169.739053" SubUnitName="MHz"/>
+                            <ConfigItem Name="spanfreq" Class="float" Type="2" Val="102719965.0473752" SubUnitName="Hz"/>
+                        </ConfigItem>
+                    </ConfigItem>
+                    <ConfigItem Name="subspans" Class="group" Type="0">
+                        <ConfigItem Name="subspan0" Class="group" Type="0">
+                            <ConfigItem Name="Block_Spectrum_5_subspan_0" Class="group" Type="0">
+                                <ConfigItem Name="stopbin" Class="integer" Type="1" Val="428"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="subspan1" Class="group" Type="0">
+                            <ConfigItem Name="Block_Spectrum_5_subspan_1" Class="group" Type="0">
+                                <ConfigItem Name="stopbin" Class="integer" Type="1" Val="428"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="subspan2" Class="group" Type="0">
+                            <ConfigItem Name="Block_Spectrum_5_subspan_2" Class="group" Type="0">
+                                <ConfigItem Name="stopbin" Class="integer" Type="1" Val="428"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="subspan3" Class="group" Type="0">
+                            <ConfigItem Name="Block_Spectrum_5_subspan_3" Class="group" Type="0">
+                                <ConfigItem Name="stopbin" Class="integer" Type="1" Val="428"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                    </ConfigItem>
+                </ConfigItem>
+                <Inputs>
+                    <Input Name="Input_Spectran_Spectra_0" Title="Spectra 1" Owner="Block_Spectrum_5"/>
+                    <Input Name="Input_Spectran_Spectra_2_0" Title="Spectra 2" Owner="Block_Spectrum_5"/>
+                </Inputs>
+                <Outputs>
+                    <Output Name="Output_Spectran_Spectra_0" Title="Spectra 1" Owner="Block_Spectrum_5"/>
+                    <Output Name="Output_Spectran_Spectra_2_0" Title="Spectra 2" Owner="Block_Spectrum_5"/>
+                    <Output Name="Output_Spectran_SubSpectra_0_0" Title="Sub 0" Owner="Block_Spectrum_5"/>
+                    <Output Name="Output_Spectran_SubSpectra_1_0" Title="Sub 1" Owner="Block_Spectrum_5"/>
+                    <Output Name="Output_Spectran_SubSpectra_2_0" Title="Sub 2" Owner="Block_Spectrum_5"/>
+                    <Output Name="Output_Spectran_SubSpectra_3_0" Title="Sub 3" Owner="Block_Spectrum_5"/>
+                </Outputs>
+            </Base>
+            <Base GUID="18abc056-5ca4-4eae-9916-720c5f6c2a87" Factory="Factory_Waterfall" Name="Block_Waterfall_5" Title="Waterfall">
+                <ConfigItem Name="Block_Waterfall_5_config" Class="group" Type="0">
+                    <ConfigItem Name="main" Class="group" Type="0">
+                        <ConfigItem Name="compression" Class="float" Type="2" Val="1000"/>
+                    </ConfigItem>
+                    <ConfigItem Name="view" Class="group" Type="0">
+                        <ConfigItem Name="frequencystart" Class="float" Type="2" Val="2388639187.215365" SubUnitName="MHz"/>
+                        <ConfigItem Name="frequencyspan" Class="float" Type="2" Val="102719965.0473752" SubUnitName="MHz"/>
+                        <ConfigItem Name="axisScale" Class="group" Type="0">
+                            <ConfigItem Name="color" Class="group" Type="0">
+                                <ConfigItem Name="base" Class="float" Type="2" Val="-0.1840493530035019"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="showcolorhistogram" Class="bool" Type="6" Val="1"/>
+                    </ConfigItem>
+                    <ConfigItem Name="legend" Class="group" Type="0" Expanded="1"/>
+                    <ConfigItem Name="colormap" Class="group" Type="0">
+                        <ConfigItem Name="low" Class="float" Type="2" Val="0.08047664165496826" SubUnitName="%"/>
+                        <ConfigItem Name="high" Class="float" Type="2" Val="0.531546950340271" SubUnitName="%"/>
+                        <ConfigItem Name="control" Class="group" Type="0">
+                            <ConfigItem Name="cvalue0" Class="float" Type="2" Val="0.513641357421875" SubUnitName="%"/>
+                            <ConfigItem Name="ccolor0" Class="float" Type="2" Val="0.03703703731298447" SubUnitName="%"/>
+                            <ConfigItem Name="cvalue1" Class="float" Type="2" Val="0.6441065073013306" SubUnitName="%"/>
+                            <ConfigItem Name="ccolor1" Class="float" Type="2" Val="0.2692307829856873" SubUnitName="%"/>
+                        </ConfigItem>
+                        <ConfigItem Name="num" Class="integer" Type="1" Val="2"/>
+                        <ConfigItem Name="palette" Class="enum" Type="7" Val="17" SVal="SpectranLambda" Names="Rainbow,Greyscale,Heatmap,Heatmap2,RedGreyBlue,RedYellow,Green,Red,Blue,Yellow,GreenCenter,RedCenter,BlueCenter,YellowCenter,Spectran,SpectranViri,SpectranOrangeHot,SpectranLambda,SolidGreen,SolidRed,SolidBlue,SolidYellow,CircularRainbow"/>
+                    </ConfigItem>
+                    <ConfigItem Name="subspans" Class="group" Type="0">
+                        <ConfigItem Name="subspan0" Class="group" Type="0">
+                            <ConfigItem Name="Block_Waterfall_5_subspan_0" Class="group" Type="0">
+                                <ConfigItem Name="stopbin" Class="integer" Type="1" Val="428"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="subspan1" Class="group" Type="0">
+                            <ConfigItem Name="Block_Waterfall_5_subspan_1" Class="group" Type="0">
+                                <ConfigItem Name="stopbin" Class="integer" Type="1" Val="428"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="subspan2" Class="group" Type="0">
+                            <ConfigItem Name="Block_Waterfall_5_subspan_2" Class="group" Type="0">
+                                <ConfigItem Name="stopbin" Class="integer" Type="1" Val="428"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="subspan3" Class="group" Type="0">
+                            <ConfigItem Name="Block_Waterfall_5_subspan_3" Class="group" Type="0">
+                                <ConfigItem Name="stopbin" Class="integer" Type="1" Val="428"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                    </ConfigItem>
+                </ConfigItem>
+                <Inputs>
+                    <Input Name="Input_Spectran_Spectra_0" Title="Spectra" Owner="Block_Waterfall_5"/>
+                </Inputs>
+                <Outputs>
+                    <Output Name="Output_Waterfall_0" Title="Spectra" Owner="Block_Waterfall_5"/>
+                    <Output Name="Output_Waterfall_SubSpectra_0_0" Title="Sub 0" Owner="Block_Waterfall_5"/>
+                    <Output Name="Output_Waterfall_SubSpectra_1_0" Title="Sub 1" Owner="Block_Waterfall_5"/>
+                    <Output Name="Output_Waterfall_SubSpectra_2_0" Title="Sub 2" Owner="Block_Waterfall_5"/>
+                    <Output Name="Output_Waterfall_SubSpectra_3_0" Title="Sub 3" Owner="Block_Waterfall_5"/>
+                </Outputs>
+            </Base>
+            <Base GUID="e4644086-8e2e-40c4-b42f-6015e63d9d9c" Factory="Factory_Histogram" Name="Block_Histogram_0" Title="Histogram">
+                <ConfigItem Name="Block_Histogram_0_config" Class="group" Type="0">
+                    <ConfigItem Name="main" Class="group" Type="0">
+                        <ConfigItem Name="persistence" Class="float" Type="2" Val="0.759" SubUnitName="%"/>
+                    </ConfigItem>
+                    <ConfigItem Name="view" Class="group" Type="0" Expanded="1">
+                        <ConfigItem Name="background" Class="color" Type="11" Val="#ff000000"/>
+                        <ConfigItem Name="fontsize" Class="integer" Type="1" Val="10"/>
+                        <ConfigItem Name="frequencystart" Class="float" Type="2" Val="2388639187.215365" SubUnitName="MHz"/>
+                        <ConfigItem Name="frequencyspan" Class="float" Type="2" Val="102719965.0473752" SubUnitName="MHz"/>
+                        <ConfigItem Name="axisScale" Class="group" Type="0">
+                            <ConfigItem Name="frequency" Class="group" Type="0" Expanded="1"/>
+                            <ConfigItem Name="power" Class="group" Type="0" Expanded="1">
+                                <ConfigItem Name="base" Class="float" Type="2" Val="0.2767443672470429"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="showcolorhistogram" Class="bool" Type="6" Val="1"/>
+                    </ConfigItem>
+                    <ConfigItem Name="colormap" Class="group" Type="0">
+                        <ConfigItem Name="control" Class="group" Type="0">
+                            <ConfigItem Name="cvalue0" Class="float" Type="2" Val="0.5965217351913452" SubUnitName="%"/>
+                            <ConfigItem Name="ccolor0" Class="float" Type="2" Val="0.300000011920929" SubUnitName="%"/>
+                        </ConfigItem>
+                    </ConfigItem>
+                    <ConfigItem Name="traces" Class="group" Type="0" Expanded="1"/>
+                    <ConfigItem Name="subspans" Class="group" Type="0">
+                        <ConfigItem Name="subspan0" Class="group" Type="0">
+                            <ConfigItem Name="Block_Histogram_0_subspan_0" Class="group" Type="0">
+                                <ConfigItem Name="mode" Class="enum" Type="7" Val="1" SVal="frequency" Names="percent,frequency,bin"/>
+                                <ConfigItem Name="startfrequency" Class="float" Type="2" Val="1000000" SubUnitName="MHz"/>
+                                <ConfigItem Name="stopfrequency" Class="float" Type="2" Val="1000000" SubUnitName="MHz"/>
+                                <ConfigItem Name="stopbin" Class="integer" Type="1" Val="428"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="subspan1" Class="group" Type="0">
+                            <ConfigItem Name="Block_Histogram_0_subspan_1" Class="group" Type="0">
+                                <ConfigItem Name="mode" Class="enum" Type="7" Val="1" SVal="frequency" Names="percent,frequency,bin"/>
+                                <ConfigItem Name="startfrequency" Class="float" Type="2" Val="1000000" SubUnitName="MHz"/>
+                                <ConfigItem Name="stopfrequency" Class="float" Type="2" Val="1000000" SubUnitName="MHz"/>
+                                <ConfigItem Name="stopbin" Class="integer" Type="1" Val="428"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="subspan2" Class="group" Type="0">
+                            <ConfigItem Name="Block_Histogram_0_subspan_2" Class="group" Type="0">
+                                <ConfigItem Name="mode" Class="enum" Type="7" Val="1" SVal="frequency" Names="percent,frequency,bin"/>
+                                <ConfigItem Name="startfrequency" Class="float" Type="2" Val="1000000" SubUnitName="MHz"/>
+                                <ConfigItem Name="stopfrequency" Class="float" Type="2" Val="1000000" SubUnitName="MHz"/>
+                                <ConfigItem Name="stopbin" Class="integer" Type="1" Val="428"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="subspan3" Class="group" Type="0">
+                            <ConfigItem Name="Block_Histogram_0_subspan_3" Class="group" Type="0">
+                                <ConfigItem Name="mode" Class="enum" Type="7" Val="1" SVal="frequency" Names="percent,frequency,bin"/>
+                                <ConfigItem Name="startfrequency" Class="float" Type="2" Val="1000000" SubUnitName="MHz"/>
+                                <ConfigItem Name="stopfrequency" Class="float" Type="2" Val="1000000" SubUnitName="MHz"/>
+                                <ConfigItem Name="stopbin" Class="integer" Type="1" Val="428"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                    </ConfigItem>
+                </ConfigItem>
+                <Inputs>
+                    <Input Name="Input_Spectran_Spectra_0" Title="Spectra" Owner="Block_Histogram_0"/>
+                </Inputs>
+                <Outputs>
+                    <Output Name="Output_Histogram_SubSpectra_0_0" Title="Sub 0" Owner="Block_Histogram_0"/>
+                    <Output Name="Output_Histogram_SubSpectra_1_0" Title="Sub 1" Owner="Block_Histogram_0"/>
+                    <Output Name="Output_Histogram_SubSpectra_2_0" Title="Sub 2" Owner="Block_Histogram_0"/>
+                    <Output Name="Output_Histogram_SubSpectra_3_0" Title="Sub 3" Owner="Block_Histogram_0"/>
+                </Outputs>
+            </Base>
+            <Base GUID="566d5161-522e-4cb7-84cd-dae4fcd83b54" Factory="Factory_Waterfall_3D" Name="Block_Waterfall_3D_1" Title="Waterfall 3D">
+                <ConfigItem Name="Block_Waterfall_3D_1_config" Class="group" Type="0">
+                    <ConfigItem Name="main" Class="group" Type="0">
+                        <ConfigItem Name="compression" Class="float" Type="2" Val="1000"/>
+                    </ConfigItem>
+                    <ConfigItem Name="view" Class="group" Type="0">
+                        <ConfigItem Name="frequencystart" Class="float" Type="2" Val="2389000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="frequencyspan" Class="float" Type="2" Val="102000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="axisScale" Class="group" Type="0">
+                            <ConfigItem Name="frequency" Class="group" Type="0">
+                                <ConfigItem Name="base" Class="float" Type="2" Val="0.2518708407878876"/>
+                                <ConfigItem Name="scale" Class="float" Type="2" Val="0.6830136179924011"/>
+                            </ConfigItem>
+                            <ConfigItem Name="power" Class="group" Type="0">
+                                <ConfigItem Name="base" Class="float" Type="2" Val="0.1526878774166107"/>
+                            </ConfigItem>
+                            <ConfigItem Name="color" Class="group" Type="0">
+                                <ConfigItem Name="base" Class="float" Type="2" Val="-0.2108905526656139"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="drawmode" Class="enum" Type="7" Val="2" SVal="surface" Names="lines,grid,surface,dots,bands"/>
+                        <ConfigItem Name="showcolorhistogram" Class="bool" Type="6" Val="1"/>
+                    </ConfigItem>
+                    <ConfigItem Name="colormap" Class="group" Type="0">
+                        <ConfigItem Name="high" Class="float" Type="2" Val="0.5058823823928833" SubUnitName="%"/>
+                        <ConfigItem Name="control" Class="group" Type="0">
+                            <ConfigItem Name="cvalue0" Class="float" Type="2" Val="0.003577857511118054" SubUnitName="%"/>
+                            <ConfigItem Name="ccolor0" Class="float" Type="2" Val="0.1" SubUnitName="%"/>
+                            <ConfigItem Name="cvalue1" Class="float" Type="2" Val="0.008364288136363029" SubUnitName="%"/>
+                            <ConfigItem Name="ccolor1" Class="float" Type="2" Val="0.9" SubUnitName="%"/>
+                            <ConfigItem Name="cvalue2" Class="float" Type="2" Val="0.5041821440681815" SubUnitName="%"/>
+                            <ConfigItem Name="ccolor2" Class="float" Type="2" Val="0.95" SubUnitName="%"/>
+                        </ConfigItem>
+                        <ConfigItem Name="num" Class="integer" Type="1" Val="0"/>
+                        <ConfigItem Name="brightness" Class="float" Type="2" Val="-0.39" SubUnitName="%"/>
+                        <ConfigItem Name="conrast" Class="float" Type="2" Val="0.14" SubUnitName="%"/>
+                        <ConfigItem Name="saturation" Class="float" Type="2" Val="0.21" SubUnitName="%"/>
+                        <ConfigItem Name="palette" Class="enum" Type="7" Val="14" SVal="Spectran" Names="Rainbow,Greyscale,Heatmap,Heatmap2,RedGreyBlue,RedYellow,Green,Red,Blue,Yellow,GreenCenter,RedCenter,BlueCenter,YellowCenter,Spectran,SpectranViri,SpectranOrangeHot,SpectranLambda,SolidGreen,SolidRed,SolidBlue,SolidYellow,CircularRainbow"/>
+                    </ConfigItem>
+                    <ConfigItem Name="orientation3d" Class="group" Type="0">
+                        <ConfigItem Name="offsetx" Class="float" Type="2" Val="0.09437386516947299"/>
+                        <ConfigItem Name="offsety" Class="float" Type="2" Val="0.3603448271751404"/>
+                        <ConfigItem Name="scalex" Class="float" Type="2" Val="0.6666666666666663"/>
+                        <ConfigItem Name="scaley" Class="float" Type="2" Val="0.3333333333333334"/>
+                        <ConfigItem Name="scalez" Class="float" Type="2" Val="0.6666666666666663"/>
+                        <ConfigItem Name="rotatex" Class="float" Type="2" Val="17.64259725024525"/>
+                        <ConfigItem Name="rotatey" Class="float" Type="2" Val="-35.6571129433542"/>
+                        <ConfigItem Name="rotatez" Class="float" Type="2" Val="-4.341560489303085"/>
+                        <ConfigItem Name="enableautorotate" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="shadow" Class="bool" Type="6" Val="1"/>
+                    </ConfigItem>
+                    <ConfigItem Name="markers" Class="group" Type="0"/>
+                </ConfigItem>
+                <Inputs>
+                    <Input Name="Input_Spectran_Spectra_0" Title="Spectra" Owner="Block_Waterfall_3D_1"/>
+                </Inputs>
+            </Base>
+            <Base GUID="2308e275-975e-4fd2-b48b-6a1134c17604" Factory="Factory_IQPowerSpectrum" Name="Block_IQPowerSpectrum_0" Title="IQ Power Spectrum">
+                <ConfigItem Name="Block_IQPowerSpectrum_0_config" Class="group" Type="0">
+                    <ConfigItem Name="main" Class="group" Type="0" Expanded="1">
+                        <ConfigItem Name="fftsize" Class="integer" Type="1" Val="512"/>
+                    </ConfigItem>
+                    <ConfigItem Name="view" Class="group" Type="0">
+                        <ConfigItem Name="frequencystart" Class="float" Type="2" Val="2389000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="frequencyspan" Class="float" Type="2" Val="102000000" SubUnitName="MHz"/>
+                    </ConfigItem>
+                </ConfigItem>
+                <Inputs>
+                    <Input Name="Input_IQ_0" Title="IQ" Owner="Block_IQPowerSpectrum_0"/>
+                </Inputs>
+                <Outputs>
+                    <Output Name="Output_pectra_0" Title="Spectra" Owner="Block_IQPowerSpectrum_0">
+                        <Connections>
+                            <Connection Name="Input_Spectran_Spectra_0" Title="Spectra 1" Owner="Block_Spectrum_5"/>
+                            <Connection Name="Input_Spectran_Spectra_0" Title="Spectra" Owner="Block_Waterfall_5"/>
+                            <Connection Name="Input_Spectran_Spectra_0" Title="Spectra" Owner="Block_Histogram_0"/>
+                            <Connection Name="Input_Spectran_Spectra_0" Title="Spectra" Owner="Block_Waterfall_3D_1"/>
+                        </Connections>
+                    </Output>
+                </Outputs>
+            </Base>
+            <Base GUID="cb7087b6-0640-4ec0-9f44-37aee48632f1" Factory="Factory_Spectran_V6B" Name="Block_Spectran_V6B_0" Title="SPECTRAN V6 PLUS">
+                <ConfigItem Name="Block_Spectran_V6B_0_config" Class="group" Type="0">
+                    <ConfigItem Name="main" Class="group" Type="0">
+                        <ConfigItem Name="reflevel" Class="float" Type="2" Val="-38" SubUnitName="dBm"/>
+                    </ConfigItem>
+                    <ConfigItem Name="device" Class="group" Type="0" Expanded="1">
+                        <ConfigItem Name="receiverclock" Class="enum" Type="7" Val="1" SVal="122MHz" Names="92MHz,122MHz,184MHz,245MHz,77MHz,61MHz,46MHz" Disabled="12"/>
+                        <ConfigItem Name="tempfancontrol" Class="bool" Type="6" Val="0"/>
+                    </ConfigItem>
+                    <ConfigItem Name="calibration" Class="group" Type="0">
+                        <ConfigItem Name="preamp" Class="enum" Type="7" Val="3" SVal="Amp" Names="Disabled,Auto,None,Amp,Preamp,Both" Disabled="48"/>
+                        <ConfigItem Name="SpectranV6BNotch1" Class="group" Type="0">
+                            <ConfigItem Name="frequency" Class="float" Type="2" Val="122879958.1875142" SubUnitName="MHz"/>
+                        </ConfigItem>
+                    </ConfigItem>
+                    <ConfigItem Name="SpectranV6Manager" Class="group" Type="0" Expanded="1">
+                        <ConfigItem Name="fpgaupdate" Class="group" Type="0" Expanded="1"/>
+                    </ConfigItem>
+                </ConfigItem>
+                <Inputs>
+                    <Input Name="Input_Antenna_0" Title="RF1" Owner="Block_Spectran_V6B_0"/>
+                    <Input Name="Input_Antenna2_0" Title="RF2" Owner="Block_Spectran_V6B_0"/>
+                    <Input Name="Input_Spectran_V6B_IQ_0" Title="IQStream1" Owner="Block_Spectran_V6B_0"/>
+                </Inputs>
+                <Outputs>
+                    <Output Name="Output_Spectran_V6B_IQ_0" Title="IQStream1" Owner="Block_Spectran_V6B_0">
+                        <Connections>
+                            <Connection Name="Input_IQ_0" Title="IQ" Owner="Block_IQPowerSpectrum_0"/>
+                        </Connections>
+                    </Output>
+                    <Output Name="Output_Spectran_V6B_IQ2_0" Title="IQStream2" Owner="Block_Spectran_V6B_0"/>
+                    <Output Name="Output_Spectran_V6B_Spectra1_0" Title="Spectra1" Owner="Block_Spectran_V6B_0"/>
+                    <Output Name="Output_Spectran_V6B_Spectra2_0" Title="Spectra2" Owner="Block_Spectran_V6B_0"/>
+                    <Output Name="Output_Spectran_V6B_GPS_0" Title="Location" Owner="Block_Spectran_V6B_0"/>
+                    <Output Name="Output_Spectran_V6B_TX_0" Title="Tx" Owner="Block_Spectran_V6B_0"/>
+                </Outputs>
+            </Base>
+            <Base GUID="7fbf4f71-5454-459b-bff7-114258f2df45" Factory="Factory_RF_Frontend" Name="HF_Path_0" Title="Calibration (ant. 30800)">
+                <ConfigItem Name="HF_Path_0_config" Class="group" Type="0">
+                    <ConfigItem Name="settings" Class="group" Type="0" Expanded="1"/>
+                    <ConfigItem Name="main" Class="group" Type="0" Expanded="1">
+                        <ConfigItem Name="hfrange" Class="enum" Type="7" Val="0" SVal="6GHz" Names="6GHz,20GHz,30GHz,120GHz,1THz"/>
+                        <ConfigItem Name="hfpathantenna" Class="enum" Type="7" Val="64" SVal="OmniLOG 30800 (300MHz-8GHz)" Names="--- No Antenna (0dBi) ---,BicoLOG 20100 (20MHz-1GHz),BicoLOG 20100 X (20MHz-1GHz),BicoLOG 20100E (20MHz-1GHz),BicoLOG 20100E X (20MHz-1GHz),BicoLOG 20300 (20MHz-3GHz),BicoLOG 20300 X (20MHz-3GHz),BicoLOG 30100 (30MHz-1GHz),BicoLOG 30100 X (30MHz-1GHz),BicoLOG 30100E (20MHz-1GHz),BicoLOG 30100E X (20MHz-1GHz),BicoLOG 5070 (50MHz-700MHz),BicoLOG 5070 X (50MHz-700MHz),HyperLOG 20600 EMI 0004 (20MHz-6GHz),HyperLOG 20600 EMI 0005 (20MHz-6GHz),HyperLOG 20600 EMI 0006 (20MHz-6GHz),HyperLOG 30100 (0.38-10GHz),HyperLOG 30100 X (0.38-10GHz),HyperLOG 30200X (380MHz-20GHz),HyperLOG 3080 (0.38-8GHz),HyperLOG 3080 X (0.38-8GHz),HyperLOG 4025 (0.4-2.5GHz),HyperLOG 4025 X (0.4-2.5GHz),HyperLOG 4040 (0.4-4GHz),HyperLOG 4040 X (0.4-4GHz),HyperLOG 4060 (0.4-6GHz),HyperLOG 4060 X (0.4-6GHz),HyperLOG 60100 (0.68-10GHz),HyperLOG 60100 X (0.68-10GHz),HyperLOG 60200X (680MHz-20GHz),HyperLOG 6080 (0.68-8GHz),HyperLOG 6080 X (0.68-8GHz),HyperLOG 7025 (0.7-2.5GHz),HyperLOG 7025 X (0.7-2.5GHz),HyperLOG 7040 (0.7-4GHz),HyperLOG 7040 X (0.7-4GHz),HyperLOG 7060 (0.7-6GHz),HyperLOG 7060 X (0.7-6GHz),IsoLOG 3D Mobile 9080 PRO dipole, 1 LNA (9.0 kHz - 8.0 GHz),IsoLOG 3D Mobile 9080 PRO dipole, 2 LNA (9.0 kHz - 8.0 GHz),IsoLOG 3D Mobile 9080 PRO dipole, LNA off (9.0 kHz - 8.0 GHz),IsoLOG 3D Mobile 9080 PRO loop, 1 LNA (9.0 kHz - 8.0 GHz),IsoLOG 3D Mobile 9080 PRO loop, 2 LNA (9.0 kHz - 8.0 GHz),IsoLOG 3D Mobile 9080 PRO loop, LNA off (9.0 kHz - 8.0 GHz),IsoLOG 3D-Mobile 9030PRO dipole 1 LNA (9.0 MHz - 3.0 THz),IsoLOG 3D-Mobile 9030PRO dipole 2 LNA (9.0 MHz - 3.0 THz),IsoLOG 3D-Mobile 9030PRO dipole LNA off (9.0 MHz - 3.0 THz),IsoLOG 3D-Mobile 9030PRO loop 1 LNA (9.0 MHz - 3.0 THz),IsoLOG 3D-Mobile 9030PRO loop 2 LNAs (9.0 MHz - 3.0 THz),IsoLOG 3D-Mobile 9030PRO loop LNA off (9.0 MHz - 3.0 THz),IsoLOG 3D-Mobile 9060PRO dipole 1 LNA (9.0 MHz - 5.99315 THz),IsoLOG 3D-Mobile 9060PRO dipole 2 LNA (9.0 MHz - 5.99315 THz),IsoLOG 3D-Mobile 9060PRO dipole LNA off (9.0 MHz - 5.99315 THz),IsoLOG 3D-Mobile 9060PRO loop 1 LNA (9.0 MHz - 5.99315 THz),IsoLOG 3D-Mobile 9060PRO loop 2 LNA (9.0 MHz - 5.99315 THz),IsoLOG 3D-Mobile 9060PRO loop LNA off (9.0 MHz - 5.99315 THz),IsoLOG-3D-Mobile-9060-Dipole-Amp-On (9kHz-6GHz),IsoLOG-3D-Mobile-9060-Dipole-Bypass  (9kHz-6GHz),IsoLOG-3D-Mobile-9060-Loop-Amp-On  (9kHz-6GHz),IsoLOG-3D-Mobile-9060-Loop-Bypass  (9kHz-6GHz),MDF 50400X,MDF 930X,MDF 9400 / MDF 560,MDF 960X,OmniLOG 30800 (300MHz-8GHz),OmniLOG 70600 (700MHz-6GHz),OmniLOG 90200 (700MHz-2.5GHz),OmniLOG PRO 10100 (0.15 GHz - 10.0 GHz),OmniLOG PRO 10200 (0.15 GHz - 18.0 GHz),OmniLOG PRO 1030 (0.15 GHz - 3.0 GHz),OmniLOG PRO 1060 (0.15 GHz - 6.0 GHz),OmniLOG PRO N 10100 (0.15 GHz - 10.0 GHz),OmniLOG PRO N 10200 (0.15 GHz - 18.0 GHz),OmniLOG PRO N 1030 (0.15 GHz - 3.0 GHz),OmniLOG PRO N 1060 (0.15 GHz - 6.0 GHz),PowerLOG 10800 (1GHz-8GHz),PowerLOG 70180 (700MHz-18GHz)"/>
+                    </ConfigItem>
+                </ConfigItem>
+                <Inputs>
+                    <Input Name="Output_RF_Frontend_0" Title="RF" Owner="HF_Path_0"/>
+                </Inputs>
+                <Outputs>
+                    <Output Name="Output_RF_Frontend_0" Title="RF" Owner="HF_Path_0">
+                        <Connections>
+                            <Connection Name="Input_Antenna_0" Title="RF1" Owner="Block_Spectran_V6B_0"/>
+                        </Connections>
+                    </Output>
+                </Outputs>
+            </Base>
+        </Bases>
+        <Privileges>
+            <Privilege Uuid="37F01B9B-B27A-48E2-B0D1-5F6DD6194681" Dbg.UserBase="Base">
+                <Root Name="mis">
+                    <Module Name="modMisMis" Type="0">
+                        <ConfigItem Name="misMisSaveMission" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="misMisSaveMissionAs" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="misMisOpenMission" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="misMisConfigMission" Class="bool" Type="6" Val="1"/>
+                    </Module>
+                    <Module Name="modMisBlockgraphEditor" Type="0">
+                        <ConfigItem Name="misBlockgraphEditorUse" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="misBlockgraphEditorShow" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="misBlockgraphEditorEdit" Class="bool" Type="6" Val="1"/>
+                    </Module>
+                    <Module Name="modMisLicenseManager" Type="0">
+                        <ConfigItem Name="misLicenseManagerUse" Class="bool" Type="6" Val="1"/>
+                    </Module>
+                    <Module Name="modMisPackageShop" Type="0">
+                        <ConfigItem Name="misPackageShopUse" Class="bool" Type="6" Val="1"/>
+                    </Module>
+                    <Module Name="modMisGridEditor" Type="0">
+                        <ConfigItem Name="misGridEditorUse" Class="bool" Type="6" Val="1"/>
+                    </Module>
+                    <Module Name="modMisBlocks" Type="0">
+                        <ConfigItem Name="misBlocksShowConfig" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="misBlocksEditConfig" Class="bool" Type="6" Val="1"/>
+                    </Module>
+                </Root>
+            </Privilege>
+        </Privileges>
+        <DockingUI Version="2021.1">
+            <Controller SelectedPerspective="P1">
+                <Perspective Name="P1" WorkMode="Split">
+                    <StateGrid>
+                        <CellController Width="2466" Height="1124" Cols="2" Rows="1" Widths="440;2016" Heights="1118"/>
+                        <GridObjectController Cols="1" Rows="1"/>
+                    </StateGrid>
+                    <Docks>
+                        <Dock Name="Base_BlockEditor" Visible="1">
+                            <DockedPosition Name="Base_BlockEditor" Monitor="Edit" MonitorTitle="Edit Monitor" Rect="0;0;1;1"/>
+                        </Dock>
+                        <Dock Name="Base_ROC"/>
+                        <Dock Name="Base_HealthMonitor" Visible="1">
+                            <DockedPosition Name="Base_HealthMonitor" Monitor="Exec" MonitorTitle="Exec Monitor" Rect="1;0;1;1"/>
+                        </Dock>
+                        <Dock Name="Block_Spectrum_5" Visible="1">
+                            <DockedPosition Name="Block_Spectrum_5" Monitor="Exec" MonitorTitle="Exec Monitor" Rect="0;0;1;1"/>
+                        </Dock>
+                        <Dock Name="Block_Waterfall_5" Visible="1">
+                            <DockedPosition Name="Block_Waterfall_5" Monitor="Exec" MonitorTitle="Exec Monitor" Rect="0;1;1;1"/>
+                        </Dock>
+                        <Dock Name="Block_Histogram_0" Visible="1">
+                            <DockedPosition Name="Block_Histogram_0" Monitor="Exec" MonitorTitle="Exec Monitor" Rect="1;0;1;1"/>
+                        </Dock>
+                        <Dock Name="Block_Waterfall_3D_1" Visible="1">
+                            <DockedPosition Name="Block_Waterfall_3D_1" Monitor="Exec" MonitorTitle="Exec Monitor" Rect="1;1;1;1"/>
+                        </Dock>
+                        <Dock Name="Block_IQPowerSpectrum_0" Visible="1">
+                            <DockedPosition Name="Block_IQPowerSpectrum_0" Monitor="Exec" MonitorTitle="Exec Monitor" Rect="0;0;1;1"/>
+                        </Dock>
+                        <Dock Name="Block_Spectran_V6B_0" Visible="1">
+                            <DockedPosition Name="Block_Spectran_V6B_0" Monitor="Exec" MonitorTitle="Exec Monitor" Rect="0;0;1;1"/>
+                        </Dock>
+                        <Dock Name="HF_Path_0" Visible="1">
+                            <DockedPosition Name="HF_Path_0" Monitor="Exec" MonitorTitle="Exec Monitor" Rect="0;1;1;1"/>
+                        </Dock>
+                        <Dock Name="Block_Spectrum_5#SpectrumMarkers"/>
+                        <Dock Name="Block_Waterfall_5#WaterfallMarkers"/>
+                    </Docks>
+                    <InternalMonitors>
+                        <Monitor Name="Edit" Title="Edit Monitor" Visible="1" DUIMOFLAG="FixLay">
+                            <Grid>
+                                <State>
+                                    <CellController Width="440" Height="1118" Cols="1" Rows="1" Widths="440" Heights="1118"/>
+                                    <GridObjectController Cols="1" Rows="1">
+                                        <Objects>
+                                            <Object Rect="0;0;1;1">
+                                                <ExtData Items="Base_BlockEditor" Item="Base_BlockEditor"/>
+                                            </Object>
+                                        </Objects>
+                                    </GridObjectController>
+                                </State>
+                            </Grid>
+                        </Monitor>
+                        <Monitor Name="Exec" Title="Exec Monitor" Visible="1" DUIMOFLAG="ProSCs;ProDra;ProDro;ConMen">
+                            <Grid>
+                                <State>
+                                    <CellController Width="2016" Height="1118" Cols="2" Rows="2" Widths="1047;965" Heights="616;498"/>
+                                    <GridObjectController Cols="2" Rows="2">
+                                        <Objects>
+                                            <Object Rect="0;0;1;1">
+                                                <ExtData Items="Block_Spectran_V6B_0;Block_IQPowerSpectrum_0;Block_Spectrum_5" Item="Block_Spectran_V6B_0"/>
+                                            </Object>
+                                            <Object Rect="1;0;1;1">
+                                                <ExtData Items="Base_HealthMonitor;Block_Histogram_0" Item="Block_Histogram_0"/>
+                                            </Object>
+                                            <Object Rect="0;1;1;1">
+                                                <ExtData Items="HF_Path_0;Block_Waterfall_5" Item="Block_Waterfall_5"/>
+                                            </Object>
+                                            <Object Rect="1;1;1;1">
+                                                <ExtData Items="Block_Waterfall_3D_1" Item="Block_Waterfall_3D_1"/>
+                                            </Object>
+                                        </Objects>
+                                    </GridObjectController>
+                                </State>
+                            </Grid>
+                        </Monitor>
+                    </InternalMonitors>
+                    <ExternalMonitors/>
+                </Perspective>
+            </Controller>
+            <BlockDocks>
+                <BlockDock BaseName="Base_BlockEditor" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="440;220"/>
+                        <BlockEditorGuiConfiguration/>
+                        <BlockEditorGuiView ZoomFactor="0.6072234762979684" CenterScenePos="993.045;853.887"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Base_ROC" VisibleConfiguration="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="360;300"/>
+                        <ROCGuiView/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Base_HealthMonitor">
+                    <DockWidget>
+                        <Child_RTSA Splitter="360;300"/>
+                        <HealthMonitorWidget/>
+                        <HealthMonitorGuiView/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Block_Spectrum_5" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="360;300"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Block_Waterfall_5" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="360;300"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Block_Histogram_0" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="360;300"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Block_Waterfall_3D_1" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="360;300"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Block_IQPowerSpectrum_0" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="360;300"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Block_Spectran_V6B_0" VisibleConfiguration="1" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="916;651"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="HF_Path_0" VisibleConfiguration="1" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="345;384"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Block_Spectrum_5#SpectrumMarkers">
+                    <DockWidget>
+                        <Child_RTSA Splitter="360;300"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Block_Waterfall_5#WaterfallMarkers">
+                    <DockWidget>
+                        <Child_RTSA Splitter="360;300"/>
+                    </DockWidget>
+                </BlockDock>
+            </BlockDocks>
+        </DockingUI>
+        <AppRibbonLayout Order="TS.ribbonTabGRED,TS.ribbonTabRTSA,TS.ribbonTabDOUI,TS.ribbonTabSERV,TS.Base_ROC_ribbon,TS.Block_Spectran_V6B_0_ribbon">
+            <MainSections>
+                <MainSection SelectedTab="TS.ribbonTabGRED">
+                    <TabSection Name="TS.ribbonTabGRED" Visible="1"/>
+                </MainSection>
+                <MainSection SelectedTab="TS.ribbonTabDOUI">
+                    <TabSection Name="TS.ribbonTabRTSA" Visible="1"/>
+                    <TabSection Name="TS.ribbonTabDOUI" Visible="1"/>
+                </MainSection>
+                <MainSection>
+                    <TabSection Name="TS.ribbonTabSERV" Visible="1"/>
+                    <TabSection Name="TS.Base_ROC_ribbon" Visible="0"/>
+                </MainSection>
+                <MainSection SelectedTab="TS.Block_Spectran_V6B_0_ribbon">
+                    <TabSection Name="TS.Block_Spectran_V6B_0_ribbon" Visible="1"/>
+                </MainSection>
+            </MainSections>
+        </AppRibbonLayout>
+    </Data>
+</Mission>

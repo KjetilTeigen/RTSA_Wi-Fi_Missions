@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Mission>
+    <General GUID="b6f98ad3-1c94-40f1-bada-8c286ca3fba6" Version="RMIX_2016-09-30-1" Build="14869">
+        <Index>
+            <DateCreatedUTC Val="1709498910"/>
+            <BuildCreated Val="2.6.1.14869"/>
+            <DateSavedUTC Val="1709499630"/>
+            <BuildSaved Val="2.6.1.14869"/>
+            <SaveCompressed Val="0"/>
+            <MissionVersion Val="1.0"/>
+            <PreventShutdown Val="0"/>
+            <IsTXMission Val="0"/>
+            <BlockInfos>
+                <BlockInfo Factory="Factory_RF_Frontend" Name="HF_Path_0" Title="Calibration (ant. 30800)"/>
+                <BlockInfo Factory="Factory_Spectran_V6B" Name="Block_Spectran_V6B_0" Title="SPECTRAN V6 PLUS"/>
+                <BlockInfo Factory="Factory_Spectran V6 Sweep Zoom" Name="Block_Spectran V6 Sweep Zoom_0" Title="Spectran V6 Sweep Zoom"/>
+                <BlockInfo Factory="Factory_Comboview" Name="Block_ComboView_0" Title="ComboView"/>
+                <BlockInfo Factory="Factory_Comboview" Name="Block_ComboView_0#ComboViewMarkers" Title="ComboView - ComboView Markers"/>
+            </BlockInfos>
+        </Index>
+        <ConfigItem Name="missionConfig" Class="group" Type="0">
+            <ConfigItem Name="general" Class="group" Type="0">
+                <ConfigItem Name="buildCreated" Class="string" Type="3" Val="2.6.1.14869"/>
+                <ConfigItem Name="dateSavedUTC" Class="float" Type="2" Val="1709499630"/>
+                <ConfigItem Name="buildSaved" Class="string" Type="3" Val="2.6.1.14869"/>
+            </ConfigItem>
+        </ConfigItem>
+        <ConfigItem Name="rocManConfig" Class="group" Type="0">
+            <ConfigItem Name="rocAutoConnect" Class="bool" Type="6" Val="0"/>
+            <ConfigItem Name="rocItems" Class="group" Type="0"/>
+        </ConfigItem>
+        <ConfigItem Name="appBlockContainerDerivedFactoryConfig" Class="group" Type="0">
+            <DerivedFactories/>
+        </ConfigItem>
+    </General>
+    <Data>
+        <Bases>
+            <ChildBases>
+                <Base ClassName="ComboViewMarkers" ParentBlock="Block_ComboView_0" GUID="66241e95-cada-4c30-be0e-e71071fe5980" Factory="Factory_Comboview" Name="Block_ComboView_0#ComboViewMarkers" Title="ComboView - ComboView Markers"/>
+            </ChildBases>
+            <Base GUID="25542853-d6ad-4c57-a1d7-ff222650c73f" Factory="Factory_BlockEditor" Name="Base_BlockEditor" Title="Blockgraph Editor" AppBlock="1"/>
+            <Base GUID="d40e922e-3dd9-48fc-b4ec-78856e2b0424" Factory="Factory_ROC" Name="Base_ROC" Title="ROC" AppBlock="1"/>
+            <Base GUID="c395f3f3-8359-4989-95b0-c54fea92ae85" Factory="Factory_HealthMonitor" Name="Base_HealthMonitor" Title="Health Monitor" AppBlock="1"/>
+            <Base GUID="38329efb-6be7-418d-8962-5dcf6f96c15a" Factory="Factory_RF_Frontend" Name="HF_Path_0" Title="Calibration (ant. 30800)">
+                <ConfigItem Name="HF_Path_0_config" Class="group" Type="0">
+                    <ConfigItem Name="settings" Class="group" Type="0" Expanded="1"/>
+                    <ConfigItem Name="main" Class="group" Type="0" Expanded="1">
+                        <ConfigItem Name="hfrange" Class="enum" Type="7" Val="0" SVal="6GHz" Names="6GHz,20GHz,30GHz,120GHz,1THz"/>
+                        <ConfigItem Name="hfpathantenna" Class="enum" Type="7" Val="64" SVal="OmniLOG 30800 (300MHz-8GHz)" Names="--- No Antenna (0dBi) ---,BicoLOG 20100 (20MHz-1GHz),BicoLOG 20100 X (20MHz-1GHz),BicoLOG 20100E (20MHz-1GHz),BicoLOG 20100E X (20MHz-1GHz),BicoLOG 20300 (20MHz-3GHz),BicoLOG 20300 X (20MHz-3GHz),BicoLOG 30100 (30MHz-1GHz),BicoLOG 30100 X (30MHz-1GHz),BicoLOG 30100E (20MHz-1GHz),BicoLOG 30100E X (20MHz-1GHz),BicoLOG 5070 (50MHz-700MHz),BicoLOG 5070 X (50MHz-700MHz),HyperLOG 20600 EMI 0004 (20MHz-6GHz),HyperLOG 20600 EMI 0005 (20MHz-6GHz),HyperLOG 20600 EMI 0006 (20MHz-6GHz),HyperLOG 30100 (0.38-10GHz),HyperLOG 30100 X (0.38-10GHz),HyperLOG 30200X (380MHz-20GHz),HyperLOG 3080 (0.38-8GHz),HyperLOG 3080 X (0.38-8GHz),HyperLOG 4025 (0.4-2.5GHz),HyperLOG 4025 X (0.4-2.5GHz),HyperLOG 4040 (0.4-4GHz),HyperLOG 4040 X (0.4-4GHz),HyperLOG 4060 (0.4-6GHz),HyperLOG 4060 X (0.4-6GHz),HyperLOG 60100 (0.68-10GHz),HyperLOG 60100 X (0.68-10GHz),HyperLOG 60200X (680MHz-20GHz),HyperLOG 6080 (0.68-8GHz),HyperLOG 6080 X (0.68-8GHz),HyperLOG 7025 (0.7-2.5GHz),HyperLOG 7025 X (0.7-2.5GHz),HyperLOG 7040 (0.7-4GHz),HyperLOG 7040 X (0.7-4GHz),HyperLOG 7060 (0.7-6GHz),HyperLOG 7060 X (0.7-6GHz),IsoLOG 3D Mobile 9080 PRO dipole, 1 LNA (9.0 kHz - 8.0 GHz),IsoLOG 3D Mobile 9080 PRO dipole, 2 LNA (9.0 kHz - 8.0 GHz),IsoLOG 3D Mobile 9080 PRO dipole, LNA off (9.0 kHz - 8.0 GHz),IsoLOG 3D Mobile 9080 PRO loop, 1 LNA (9.0 kHz - 8.0 GHz),IsoLOG 3D Mobile 9080 PRO loop, 2 LNA (9.0 kHz - 8.0 GHz),IsoLOG 3D Mobile 9080 PRO loop, LNA off (9.0 kHz - 8.0 GHz),IsoLOG 3D-Mobile 9030PRO dipole 1 LNA (9.0 MHz - 3.0 THz),IsoLOG 3D-Mobile 9030PRO dipole 2 LNA (9.0 MHz - 3.0 THz),IsoLOG 3D-Mobile 9030PRO dipole LNA off (9.0 MHz - 3.0 THz),IsoLOG 3D-Mobile 9030PRO loop 1 LNA (9.0 MHz - 3.0 THz),IsoLOG 3D-Mobile 9030PRO loop 2 LNAs (9.0 MHz - 3.0 THz),IsoLOG 3D-Mobile 9030PRO loop LNA off (9.0 MHz - 3.0 THz),IsoLOG 3D-Mobile 9060PRO dipole 1 LNA (9.0 MHz - 5.99315 THz),IsoLOG 3D-Mobile 9060PRO dipole 2 LNA (9.0 MHz - 5.99315 THz),IsoLOG 3D-Mobile 9060PRO dipole LNA off (9.0 MHz - 5.99315 THz),IsoLOG 3D-Mobile 9060PRO loop 1 LNA (9.0 MHz - 5.99315 THz),IsoLOG 3D-Mobile 9060PRO loop 2 LNA (9.0 MHz - 5.99315 THz),IsoLOG 3D-Mobile 9060PRO loop LNA off (9.0 MHz - 5.99315 THz),IsoLOG-3D-Mobile-9060-Dipole-Amp-On (9kHz-6GHz),IsoLOG-3D-Mobile-9060-Dipole-Bypass  (9kHz-6GHz),IsoLOG-3D-Mobile-9060-Loop-Amp-On  (9kHz-6GHz),IsoLOG-3D-Mobile-9060-Loop-Bypass  (9kHz-6GHz),MDF 50400X,MDF 930X,MDF 9400 / MDF 560,MDF 960X,OmniLOG 30800 (300MHz-8GHz),OmniLOG 70600 (700MHz-6GHz),OmniLOG 90200 (700MHz-2.5GHz),OmniLOG PRO 10100 (0.15 GHz - 10.0 GHz),OmniLOG PRO 10200 (0.15 GHz - 18.0 GHz),OmniLOG PRO 1030 (0.15 GHz - 3.0 GHz),OmniLOG PRO 1060 (0.15 GHz - 6.0 GHz),OmniLOG PRO N 10100 (0.15 GHz - 10.0 GHz),OmniLOG PRO N 10200 (0.15 GHz - 18.0 GHz),OmniLOG PRO N 1030 (0.15 GHz - 3.0 GHz),OmniLOG PRO N 1060 (0.15 GHz - 6.0 GHz),PowerLOG 10800 (1GHz-8GHz),PowerLOG 70180 (700MHz-18GHz)"/>
+                    </ConfigItem>
+                </ConfigItem>
+                <Inputs>
+                    <Input Name="Output_RF_Frontend_0" Title="RF" Owner="HF_Path_0"/>
+                </Inputs>
+                <Outputs>
+                    <Output Name="Output_RF_Frontend_0" Title="RF" Owner="HF_Path_0">
+                        <Connections>
+                            <Connection Name="Input_Antenna_0" Title="RF1" Owner="Block_Spectran_V6B_0"/>
+                        </Connections>
+                    </Output>
+                </Outputs>
+            </Base>
+            <Base GUID="902374ee-4c4b-4df6-a36c-4b3e4295c816" Factory="Factory_Spectran_V6B" Name="Block_Spectran_V6B_0" Title="SPECTRAN V6 PLUS">
+                <ConfigItem Name="Block_Spectran_V6B_0_config" Class="group" Type="0">
+                    <ConfigItem Name="main" Class="group" Type="0">
+                        <ConfigItem Name="centerfreq" Class="float" Type="2" Val="2319125000" SubUnitName="MHz"/>
+                        <ConfigItem Name="decimation" Class="enum" Type="7" Val="1" SVal="1 / 2" Names="Full,1 / 2,1 / 4,1 / 8,1 / 16,1 / 32,1 / 64,1 / 128,1 / 256,1 / 512"/>
+                        <ConfigItem Name="frequencyprofile" Class="frequencyprofiles" Type="22" Items="1">
+                            <Text>wlan_5GHz_all_bands</Text>
+                        </ConfigItem>
+                        <ConfigItem Name="reflevel" Class="float" Type="2" Val="-38" SubUnitName="dBm"/>
+                    </ConfigItem>
+                    <ConfigItem Name="calibration" Class="group" Type="0">
+                        <ConfigItem Name="preamp" Class="enum" Type="7" Val="3" SVal="Amp" Names="Disabled,Auto,None,Amp,Preamp,Both" Disabled="48"/>
+                        <ConfigItem Name="SpectranV6BNotch1" Class="group" Type="0">
+                            <ConfigItem Name="frequency" Class="float" Type="2" Val="92159968.64063567" SubUnitName="MHz"/>
+                        </ConfigItem>
+                    </ConfigItem>
+                    <ConfigItem Name="SpectranV6Manager" Class="group" Type="0" Expanded="1">
+                        <ConfigItem Name="fpgaupdate" Class="group" Type="0" Expanded="1"/>
+                    </ConfigItem>
+                </ConfigItem>
+                <Inputs>
+                    <Input Name="Input_Antenna_0" Title="RF1" Owner="Block_Spectran_V6B_0"/>
+                    <Input Name="Input_Antenna2_0" Title="RF2" Owner="Block_Spectran_V6B_0"/>
+                    <Input Name="Input_Spectran_V6B_IQ_0" Title="IQStream1" Owner="Block_Spectran_V6B_0"/>
+                </Inputs>
+                <Outputs>
+                    <Output Name="Output_Spectran_V6B_IQ_0" Title="IQStream1" Owner="Block_Spectran_V6B_0">
+                        <Connections>
+                            <Connection Name="Input_Script0_0" Title="IQ Stream 1" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                        </Connections>
+                    </Output>
+                    <Output Name="Output_Spectran_V6B_IQ2_0" Title="IQStream2" Owner="Block_Spectran_V6B_0"/>
+                    <Output Name="Output_Spectran_V6B_Spectra1_0" Title="Spectra1" Owner="Block_Spectran_V6B_0"/>
+                    <Output Name="Output_Spectran_V6B_Spectra2_0" Title="Spectra2" Owner="Block_Spectran_V6B_0"/>
+                    <Output Name="Output_Spectran_V6B_GPS_0" Title="Location" Owner="Block_Spectran_V6B_0"/>
+                    <Output Name="Output_Spectran_V6B_TX_0" Title="Tx" Owner="Block_Spectran_V6B_0"/>
+                </Outputs>
+            </Base>
+            <Base GUID="edf3e209-ccc9-4dac-beab-8cdd5afc0a55" Factory="Factory_Spectran V6 Sweep Zoom" Name="Block_Spectran V6 Sweep Zoom_0" Title="Spectran V6 Sweep Zoom">
+                <ConfigItem Name="Block_Spectran V6 Sweep Zoom_0_config" Class="group" Type="0">
+                    <ConfigItem Name="main" Class="group" Type="0">
+                        <ConfigItem Name="frequencyProfile" Class="frequencyprofiles" Type="22" Items="1">
+                            <Text>wlan_5GHz_all_bands</Text>
+                        </ConfigItem>
+                        <ConfigItem Name="startFrequency" Class="float" Type="2" Val="5170000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="endFrequency" Class="float" Type="2" Val="5835000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="centerFrequency" Class="float" Type="2" Val="5502500000" SubUnitName="MHz"/>
+                        <ConfigItem Name="spanFrequency" Class="float" Type="2" Val="665000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="stepFrequency" Class="float" Type="2" Val="1000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="rbwFrequency" Class="float" Type="2" Val="138000" SubUnitName="kHz"/>
+                        <ConfigItem Name="poiDuration" Class="float" Type="2" Val="1" SubUnitName="us"/>
+                    </ConfigItem>
+                    <ConfigItem Name="view" Class="group" Type="0">
+                        <ConfigItem Name="frequencystart" Class="float" Type="2" Val="2389000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="frequencyspan" Class="float" Type="2" Val="102000000" SubUnitName="MHz"/>
+                    </ConfigItem>
+                    <ConfigItem Name="script" Class="group" Type="0">
+                        <ConfigItem Name="rbwFrequency" Class="float" Type="2" Val="138000" SubUnitName="kHz"/>
+                        <ConfigItem Name="startFrequency" Class="float" Type="2" Val="5170000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="stepFrequency" Class="float" Type="2" Val="1000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="centerFrequency" Class="float" Type="2" Val="5502500000" SubUnitName="MHz"/>
+                        <ConfigItem Name="poiDuration" Class="float" Type="2" Val="1" SubUnitName="us"/>
+                        <ConfigItem Name="frequencyProfile" Class="frequencyprofiles" Type="22" Items="1">
+                            <Text>wlan_5GHz_all_bands</Text>
+                        </ConfigItem>
+                        <ConfigItem Name="endFrequency" Class="float" Type="2" Val="5835000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="spanFrequency" Class="float" Type="2" Val="665000000" SubUnitName="MHz"/>
+                    </ConfigItem>
+                    <ConfigItem Name="backup" Class="group" Type="0">
+                        <ConfigItem Name="rbwFrequency" Class="float" Type="2" Val="138000" SubUnitName="kHz"/>
+                        <ConfigItem Name="startFrequency" Class="float" Type="2" Val="5170000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="centerFrequency" Class="float" Type="2" Val="5502500000" SubUnitName="MHz"/>
+                        <ConfigItem Name="poiDuration" Class="float" Type="2" Val="1" SubUnitName="s"/>
+                        <ConfigItem Name="frequencyProfile" Class="frequencyprofiles" Type="22" Items="1">
+                            <Text>wlan_5GHz_all_bands</Text>
+                        </ConfigItem>
+                        <ConfigItem Name="endFrequency" Class="float" Type="2" Val="5835000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="spanFrequency" Class="float" Type="2" Val="665000000" SubUnitName="MHz"/>
+                    </ConfigItem>
+                    <ConfigItem Name="backupblob" Class="blob" Type="15">
+                        <Blob>eyJ0eXBlIjoiZ3JvdXAiLCJuYW1lIjoiYmFja3VwIiwibGFiZWwiOiJTY3JpcHQgQ29uZmlnIiwiZmxhZ3MiOiJoaWRkZW4iLCJpdGVtcyI6W3sidHlwZSI6ImZsb2F0IiwibmFtZSI6InNtb290aE5vaXNlRmxvb3IiLCJsYWJlbCI6IlNtb290aCBOb2lzZSBGbG9vciIsImZsYWdzIjoiY3VzdF8xMyxjdXN0XzE1IiwibWluIjowLCJtYXgiOjEsInN0ZXAiOjAuMSwidmFsdWUiOjAuMiwiZGVmYXVsdCI6MC4yLCJ1bml0IjoiUGVyY2VudGFnZSJ9LHsidHlwZSI6ImZsb2F0IiwibmFtZSI6InJid0ZyZXF1ZW5jeSIsImxhYmVsIjoiUkJXIEZyZXF1ZW5jeSIsImZsYWdzIjoiZmxvX3NsaWRlcixmbG9fbG9nc2NhbGUsY3VzdF8xMyIsIm1pbiI6MWUtMywibWF4IjoxMDAwMDAwMCwic3RlcCI6MWUtMywidmFsdWUiOjEzODAwMCwiZGVmYXVsdCI6MTQwMDAwLCJ1bml0IjoiRnJlcXVlbmN5In0seyJ0eXBlIjoiZW51bSIsIm5hbWUiOiJjYXB0dXJlTW9kZSIsImxhYmVsIjoiQ2FwdHVyZSIsImZsYWdzIjoiY3VzdF8xNyIsInZhbHVlIjoxLCJkZWZhdWx0IjoxLCJ2YWx1ZXMiOiJzY2FuLHN3ZWVwLHJlYWx0aW1lLHBvaSxyYncsZnN3ZWVwIiwiZGlzYWJsZWQiOjB9LHsidHlwZSI6ImZsb2F0IiwibmFtZSI6InN0YXJ0RnJlcXVlbmN5IiwibGFiZWwiOiJTdGFydCBGcmVxdWVuY3kiLCJmbGFncyI6ImN1c3RfMTMiLCJtaW4iOjc1MDAwMDAwLCJtYXgiOjYwMDAwMDAwMDAsInN0ZXAiOjEsInZhbHVlIjo1MTcwMDAwMDAwLCJkZWZhdWx0IjozODAwMDAwMDAsInVuaXQiOiJGcmVxdWVuY3kifSx7InR5cGUiOiJmbG9hdCIsIm5hbWUiOiJzdGVwRnJlcXVlbmN5IiwibGFiZWwiOiJTdGVwIEZyZXF1ZW5jeSIsImZsYWdzIjoiZmxvX3NsaWRlcixmbG9fbG9nc2NhbGUsY3VzdF8xMyxjdXN0XzE0IiwibWluIjoxMDAwLCJtYXgiOjEwMDAwMDAwMDAsInN0ZXAiOjEwMDAsInZhbHVlIjoxMDAwMDAwLCJkZWZhdWx0IjoxMDAwMDAwLCJ1bml0IjoiRnJlcXVlbmN5In0seyJ0eXBlIjoiZmxvYXQiLCJuYW1lIjoiY2VudGVyRnJlcXVlbmN5IiwibGFiZWwiOiJDZW50ZXIgRnJlcXVlbmN5IiwiZmxhZ3MiOiJjdXN0XzEzIiwibWluIjo3NTAwMDAwMCwibWF4Ijo2MDAwMDAwMDAwLCJzdGVwIjoxLCJ2YWx1ZSI6NTUwMjUwMDAwMCwiZGVmYXVsdCI6MzE5MDAwMDAwMCwidW5pdCI6IkZyZXF1ZW5jeSJ9LHsidHlwZSI6ImZsb2F0IiwibmFtZSI6InJlZmVyZW5jZUxldmVsIiwibGFiZWwiOiJSZWZlcmVuY2UgTGV2ZWwiLCJmbGFncyI6ImZsb19zbGlkZXIsY3VzdF8xMyxjdXN0XzE0IiwibWluIjotMzgsIm1heCI6LTgsInN0ZXAiOjAuMSwidmFsdWUiOjAsImRlZmF1bHQiOjAsInVuaXQiOiJkQm0ifSx7InR5cGUiOiJmbG9hdCIsIm5hbWUiOiJwb2lEdXJhdGlvbiIsImxhYmVsIjoiUE9JIER1cmF0aW9uIiwiZmxhZ3MiOiJmbG9fc2xpZGVyLGZsb19sb2dzY2FsZSxyZWFkb25seSxjdXN0XzEzLGN1c3RfMTQiLCJtaW4iOjFlLTcsIm1heCI6MSwic3RlcCI6MWUtOCwidmFsdWUiOjEsImRlZmF1bHQiOjEwLCJ1bml0IjoiVGltZSJ9LHsidHlwZSI6ImZyZXF1ZW5jeXByb2ZpbGVzIiwibmFtZSI6ImZyZXF1ZW5jeVByb2ZpbGUiLCJsYWJlbCI6IkZyZXF1ZW5jeSBQcm9maWxlIiwiZmxhZ3MiOiIiLCJ2YWx1ZXMiOlsid2xhbl81R0h6X2FsbF9iYW5kcyJdfSx7InR5cGUiOiJmbG9hdCIsIm5hbWUiOiJlbmRGcmVxdWVuY3kiLCJsYWJlbCI6IkVuZCBGcmVxdWVuY3kiLCJmbGFncyI6ImN1c3RfMTMiLCJtaW4iOjc1MDAwMDAwLCJtYXgiOjYwMDAwMDAwMDAsInN0ZXAiOjEsInZhbHVlIjo1ODM1MDAwMDAwLCJkZWZhdWx0Ijo2MDAwMDAwMDAwLCJ1bml0IjoiRnJlcXVlbmN5In0seyJ0eXBlIjoiZW51bSIsIm5hbWUiOiJmZnRXaW5kb3ciLCJsYWJlbCI6IkZGVCBXaW5kb3ciLCJmbGFncyI6ImN1c3RfMTQiLCJ2YWx1ZSI6NCwiZGVmYXVsdCI6NCwidmFsdWVzIjoiSGFtbWluZyxIYW5uLFVuaWZvcm0sQmxhY2ttYW4sQmxhY2ttYW4gSGFycmlzLEJsYWNrbWFuIEhhcnJpcyA3LEZsYXQgVG9wLExhbmN6b3MsR2F1c3Npb24gMC41LEdhdXNzaW9uIDAuNCxHYXVzc2lhbiAwLjMsR2F1c3Npb24gMC4yLEdhdXNzaWFuIDAuMSxLYWlzZXIgNixLYWlzZXIgMTIsS2Fpc2VyIDE4LEthaXNlciAzNixLYWlzZXIgNzIsVHVrZXkgMC4xLFR1a2V5IDAuMyxUdWtleSAwLjUsVHVrZXkgMC43LFR1a2V5IDAuOSIsImRpc2FibGVkIjowfSx7InR5cGUiOiJmbG9hdCIsIm5hbWUiOiJzcGFuRnJlcXVlbmN5IiwibGFiZWwiOiJTcGFuIEZyZXF1ZW5jeSIsImZsYWdzIjoiZmxvX3NsaWRlcixmbG9fbG9nc2NhbGUsY3VzdF8xMyIsIm1pbiI6MTAwMCwibWF4Ijo2MDAwMDAwMDAwLCJzdGVwIjoxLCJ2YWx1ZSI6NjY1MDAwMDAwLCJkZWZhdWx0Ijo1NjIwMDAwMDAwLCJ1bml0IjoiRnJlcXVlbmN5In1dfQ==</Blob>
+                    </ConfigItem>
+                </ConfigItem>
+                <Inputs>
+                    <Input Name="Input_Script0_0" Title="IQ Stream 1" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="Input_Script1_0" Title="Spectra" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="Input_Script2_0" Title="Input 3" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="Input_Script3_0" Title="Input 4" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in4" Title="Input 5" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in5" Title="Input 6" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in6" Title="Input 7" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in7" Title="Input 8" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in8" Title="Input 9" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in9" Title="Input 10" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in10" Title="Input 11" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in11" Title="Input 12" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in12" Title="Input 13" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in13" Title="Input 14" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in14" Title="Input 15" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in15" Title="Input 16" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in16" Title="Input 17" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in17" Title="Input 18" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in18" Title="Input 19" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Input Name="in19" Title="Input 20" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                </Inputs>
+                <Outputs>
+                    <Output Name="Output_Script0_0" Title="Spectra 1" Owner="Block_Spectran V6 Sweep Zoom_0">
+                        <Connections>
+                            <Connection Name="Input_Comboview_Spectra_0" Title="Spectra 1" Owner="Block_ComboView_0"/>
+                        </Connections>
+                    </Output>
+                    <Output Name="Output_Script1_0" Title="IQ" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="Output_Script2_0" Title="Output 3" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="Output_Script3_0" Title="Output 4" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out4" Title="Output 5" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out5" Title="Output 6" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out6" Title="Output 7" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out7" Title="Output 8" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out8" Title="Output 9" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out9" Title="Output 10" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out10" Title="Output 11" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out11" Title="Output 12" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out12" Title="Output 13" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out13" Title="Output 14" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out14" Title="Output 15" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out15" Title="Output 16" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out16" Title="Output 17" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out17" Title="Output 18" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out18" Title="Output 19" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                    <Output Name="out19" Title="Output 20" Owner="Block_Spectran V6 Sweep Zoom_0"/>
+                </Outputs>
+            </Base>
+            <Base GUID="9c081cb6-ffa0-43b2-af8f-945146a306e1" Factory="Factory_Comboview" Name="Block_ComboView_0" Title="ComboView">
+                <ConfigItem Name="Block_ComboView_0_config" Class="group" Type="0">
+                    <ConfigItem Name="settings" Class="group" Type="0" Expanded="1"/>
+                    <ConfigItem Name="main" Class="group" Type="0">
+                        <ConfigItem Name="compression" Class="float" Type="2" Val="1"/>
+                    </ConfigItem>
+                    <ConfigItem Name="view" Class="group" Type="0" Expanded="1">
+                        <ConfigItem Name="frequencystart" Class="float" Type="2" Val="5170000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="frequencyspan" Class="float" Type="2" Val="665000000" SubUnitName="MHz"/>
+                        <ConfigItem Name="profile" Class="frequencyprofiles" Type="22" Items="1">
+                            <Text>wlan_5GHz_all_bands</Text>
+                        </ConfigItem>
+                        <ConfigItem Name="axisScale" Class="group" Type="0">
+                            <ConfigItem Name="spectrumpower" Class="group" Type="0">
+                                <ConfigItem Name="base" Class="float" Type="2" Val="0.1967251031521031"/>
+                            </ConfigItem>
+                            <ConfigItem Name="histogrampower" Class="group" Type="0">
+                                <ConfigItem Name="base" Class="float" Type="2" Val="0.1924646022792674"/>
+                            </ConfigItem>
+                        </ConfigItem>
+                        <ConfigItem Name="showcolorhistogram" Class="bool" Type="6" Val="1"/>
+                    </ConfigItem>
+                    <ConfigItem Name="analyzercontrol" Class="group" Type="0">
+                        <ConfigItem Name="mode" Class="enum" Type="7" Val="1" SVal="sweep" Names="scan,sweep,realtime,poi,rbw,fsweep"/>
+                    </ConfigItem>
+                    <ConfigItem Name="traces" Class="group" Type="0" Expanded="1">
+                        <ConfigItem Name="trace#clearwrite#3216037198" Class="group" Type="0"/>
+                        <ConfigItem Name="trace#maxhold#3455419508" Class="group" Type="0">
+                            <ConfigItem Name="color" Class="color" Type="11" Val="#ff9d0000"/>
+                            <ConfigItem Name="opacity" Class="float" Type="2" Val="0.17" SubUnitName="%"/>
+                        </ConfigItem>
+                        <ConfigItem Name="trace#periodbuffer#3355444321" Class="group" Type="0">
+                            <ConfigItem Name="color" Class="color" Type="11" Val="#ffffffff"/>
+                            <ConfigItem Name="linewidth" Class="float" Type="2" Val="1"/>
+                            <ConfigItem Name="opacity" Class="float" Type="2" Val="0.5" SubUnitName="%"/>
+                            <ConfigItem Name="limit" Class="integer" Type="1" Val="26"/>
+                        </ConfigItem>
+                    </ConfigItem>
+                    <ConfigItem Name="colormap" Class="group" Type="0">
+                        <ConfigItem Name="control" Class="group" Type="0">
+                            <ConfigItem Name="cvalue0" Class="float" Type="2" Val="0.4711538553237915" SubUnitName="%"/>
+                            <ConfigItem Name="ccolor0" Class="float" Type="2" Val="0.5333333611488342" SubUnitName="%"/>
+                        </ConfigItem>
+                        <ConfigItem Name="palette" Class="enum" Type="7" Val="17" SVal="SpectranLambda" Names="Rainbow,Greyscale,Heatmap,Heatmap2,RedGreyBlue,RedYellow,Green,Red,Blue,Yellow,GreenCenter,RedCenter,BlueCenter,YellowCenter,Spectran,SpectranViri,SpectranOrangeHot,SpectranLambda,SolidGreen,SolidRed,SolidBlue,SolidYellow,CircularRainbow"/>
+                    </ConfigItem>
+                    <ConfigItem Name="histocolors" Class="group" Type="0">
+                        <ConfigItem Name="control" Class="group" Type="0">
+                            <ConfigItem Name="cvalue0" Class="float" Type="2" Val="0.4178082048892975" SubUnitName="%"/>
+                            <ConfigItem Name="ccolor0" Class="float" Type="2" Val="0.4150943458080292" SubUnitName="%"/>
+                        </ConfigItem>
+                    </ConfigItem>
+                </ConfigItem>
+                <Inputs>
+                    <Input Name="Input_Comboview_Spectra_0" Title="Spectra 1" Owner="Block_ComboView_0"/>
+                    <Input Name="Input_Comboview_Spectra_2_0" Title="Spectra 2" Owner="Block_ComboView_0"/>
+                </Inputs>
+                <Outputs>
+                    <Output Name="Output_Comboview_Spectra_0" Title="Spectra 1" Owner="Block_ComboView_0"/>
+                    <Output Name="Output_Comboview_Spectra_2_0" Title="Spectra 2" Owner="Block_ComboView_0"/>
+                </Outputs>
+            </Base>
+        </Bases>
+        <Privileges>
+            <Privilege Uuid="37F01B9B-B27A-48E2-B0D1-5F6DD6194681" Dbg.UserBase="Base">
+                <Root Name="mis">
+                    <Module Name="modMisMis" Type="0">
+                        <ConfigItem Name="misMisSaveMission" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="misMisSaveMissionAs" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="misMisOpenMission" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="misMisConfigMission" Class="bool" Type="6" Val="1"/>
+                    </Module>
+                    <Module Name="modMisBlockgraphEditor" Type="0">
+                        <ConfigItem Name="misBlockgraphEditorUse" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="misBlockgraphEditorShow" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="misBlockgraphEditorEdit" Class="bool" Type="6" Val="1"/>
+                    </Module>
+                    <Module Name="modMisLicenseManager" Type="0">
+                        <ConfigItem Name="misLicenseManagerUse" Class="bool" Type="6" Val="1"/>
+                    </Module>
+                    <Module Name="modMisPackageShop" Type="0">
+                        <ConfigItem Name="misPackageShopUse" Class="bool" Type="6" Val="1"/>
+                    </Module>
+                    <Module Name="modMisGridEditor" Type="0">
+                        <ConfigItem Name="misGridEditorUse" Class="bool" Type="6" Val="1"/>
+                    </Module>
+                    <Module Name="modMisBlocks" Type="0">
+                        <ConfigItem Name="misBlocksShowConfig" Class="bool" Type="6" Val="1"/>
+                        <ConfigItem Name="misBlocksEditConfig" Class="bool" Type="6" Val="1"/>
+                    </Module>
+                </Root>
+            </Privilege>
+        </Privileges>
+        <DockingUI Version="2021.1">
+            <Controller SelectedPerspective="P1">
+                <Perspective Name="P1" WorkMode="Split">
+                    <StateGrid>
+                        <CellController Width="2466" Height="1124" Cols="1" Rows="1" Widths="2460" Heights="1118"/>
+                        <GridObjectController Cols="1" Rows="1"/>
+                    </StateGrid>
+                    <Docks>
+                        <Dock Name="Base_BlockEditor">
+                            <DockedPosition Name="Base_BlockEditor" Monitor="Edit" MonitorTitle="Edit Monitor" Rect="0;0;1;1"/>
+                        </Dock>
+                        <Dock Name="Base_ROC"/>
+                        <Dock Name="Base_HealthMonitor"/>
+                        <Dock Name="HF_Path_0" Visible="1">
+                            <DockedPosition Name="HF_Path_0" Monitor="Exec" MonitorTitle="Exec Monitor" Rect="0;0;1;1"/>
+                        </Dock>
+                        <Dock Name="Block_Spectran_V6B_0" Visible="1">
+                            <DockedPosition Name="Block_Spectran_V6B_0" Monitor="Exec" MonitorTitle="Exec Monitor" Rect="0;0;1;1"/>
+                        </Dock>
+                        <Dock Name="Block_Spectran V6 Sweep Zoom_0" Visible="1">
+                            <DockedPosition Name="Block_Spectran V6 Sweep Zoom_0" Monitor="Exec" MonitorTitle="Exec Monitor" Rect="0;0;1;1"/>
+                        </Dock>
+                        <Dock Name="Block_ComboView_0" Visible="1">
+                            <DockedPosition Name="Block_ComboView_0" Monitor="Exec" MonitorTitle="Exec Monitor" Rect="0;0;1;1"/>
+                        </Dock>
+                        <Dock Name="Block_ComboView_0#ComboViewMarkers"/>
+                    </Docks>
+                    <InternalMonitors>
+                        <Monitor Name="Edit" Title="Edit Monitor" Visible="0" DUIMOFLAG="FixLay">
+                            <Grid>
+                                <State>
+                                    <CellController Width="392" Height="1118" Cols="1" Rows="1" Widths="392" Heights="1118"/>
+                                    <GridObjectController Cols="1" Rows="1">
+                                        <Objects>
+                                            <Object Rect="0;0;1;1">
+                                                <ExtData Items="Base_BlockEditor"/>
+                                            </Object>
+                                        </Objects>
+                                    </GridObjectController>
+                                </State>
+                            </Grid>
+                        </Monitor>
+                        <Monitor Name="Exec" Title="Exec Monitor" Visible="1" DUIMOFLAG="ProSCs;ProDra;ProDro;ConMen">
+                            <Grid>
+                                <State>
+                                    <CellController Width="2460" Height="1118" Cols="1" Rows="1" Widths="2460" Heights="1118"/>
+                                    <GridObjectController Cols="1" Rows="1">
+                                        <Objects>
+                                            <Object Rect="0;0;1;1">
+                                                <ExtData Items="Block_Spectran V6 Sweep Zoom_0;Block_Spectran_V6B_0;Block_ComboView_0;HF_Path_0" Item="Block_ComboView_0"/>
+                                            </Object>
+                                        </Objects>
+                                    </GridObjectController>
+                                </State>
+                            </Grid>
+                        </Monitor>
+                    </InternalMonitors>
+                    <ExternalMonitors/>
+                </Perspective>
+            </Controller>
+            <BlockDocks>
+                <BlockDock BaseName="Base_BlockEditor" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="355;1077"/>
+                        <BlockEditorGuiConfiguration/>
+                        <BlockEditorGuiView ZoomFactor="0.3285272914521112" CenterScenePos="164.37;1578.26"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Base_ROC" VisibleConfiguration="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="360;300"/>
+                        <ROCGuiView/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Base_HealthMonitor">
+                    <DockWidget>
+                        <Child_RTSA Splitter="176;591"/>
+                        <HealthMonitorWidget/>
+                        <HealthMonitorGuiView/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="HF_Path_0" VisibleConfiguration="1" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="345;384"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Block_Spectran_V6B_0" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="916;651"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Block_Spectran V6 Sweep Zoom_0" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="380;436"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Block_ComboView_0" Visible="1">
+                    <DockWidget>
+                        <Child_RTSA Splitter="366;356"/>
+                    </DockWidget>
+                </BlockDock>
+                <BlockDock BaseName="Block_ComboView_0#ComboViewMarkers">
+                    <DockWidget>
+                        <Child_RTSA Splitter="366;356"/>
+                    </DockWidget>
+                </BlockDock>
+            </BlockDocks>
+        </DockingUI>
+        <AppRibbonLayout Order="TS.ribbonTabRTSA,TS.ribbonTabGRED,TS.ribbonTabDOUI,TS.ribbonTabSERV,TS.Base_ROC_ribbon,TS.Block_Spectran_V6B_0_ribbon,TS.Block_Spectran V6 Sweep Zoom_0_ribbon">
+            <MainSections>
+                <MainSection SelectedTab="TS.ribbonTabRTSA">
+                    <TabSection Name="TS.ribbonTabRTSA" Visible="1"/>
+                    <TabSection Name="TS.ribbonTabGRED" Visible="1"/>
+                    <TabSection Name="TS.ribbonTabDOUI" Visible="1"/>
+                </MainSection>
+                <MainSection>
+                    <TabSection Name="TS.ribbonTabSERV" Visible="1"/>
+                    <TabSection Name="TS.Base_ROC_ribbon" Visible="0"/>
+                </MainSection>
+                <MainSection SelectedTab="TS.Block_Spectran_V6B_0_ribbon">
+                    <TabSection Name="TS.Block_Spectran_V6B_0_ribbon" Visible="1"/>
+                </MainSection>
+                <MainSection SelectedTab="TS.Block_Spectran V6 Sweep Zoom_0_ribbon">
+                    <TabSection Name="TS.Block_Spectran V6 Sweep Zoom_0_ribbon" Visible="1"/>
+                </MainSection>
+            </MainSections>
+        </AppRibbonLayout>
+    </Data>
+</Mission>
