@@ -27,7 +27,7 @@ The **Spectum Condition Block** have three Frequency Masks that is added (change
 
 _Hopefully you do not have any Wi-Fi radios using these channels_
 
-Turn on and start the Spectran V6 from the menu, change to the IQ Rate you have available. I would recommend using 1/2 span so you do not get any DC spikes at the center of the center of the channel (https://v6-forum.aaronia.de/forum/topic/different-cw-power-displayed-in-full-span-compared-to-1-2-1-4-etc/). Depending on your IQ rate you could end up not seeing all channels, so change the Center Frequency to one of the channels, or use Full Span with a slighly chifted center frequency so you the DC spikse do not interfere the view of the frequency you are monitoring.
+Turn on and start the Spectran V6 from the menu, change to the IQ Rate you have available. I would recommend using 1/2 span so you do not get any DC spikes at the center of the frequency you monitor (https://v6-forum.aaronia.de/forum/topic/different-cw-power-displayed-in-full-span-compared-to-1-2-1-4-etc/). Depending on your IQ rate you could end up not seeing all channels, so change the Center Frequency to one of the channels, or use Full Span with a slighly shifted center frequency so the DC spike do not interfere the view of the frequency you are monitoring.
 
 ![TDWR_grid](https://github.com/KjetilTeigen/RTSA_Wi-Fi_Missions/blob/main/missions/TDWR_Mission/grid.png)
 
