@@ -8,7 +8,7 @@ Hardware that is used is a Spectran 500X with pre-amp license that will help wit
 
 ## About the mission
 
-(picture)
+![TDWR-Spectra_record_mission](https://github.com/KjetilTeigen/RTSA_Wi-Fi_Missions/blob/main/missions/TDWR_Mission/block_diagram.png)
 
 The mission starts with a **Calibration Block** (https://v6-forum.aaronia.de/forum/topic/calibration-block/) where you add any loss, gain for the Rx. In this mission I have not added anything, but I would highly recommened using an Antenna from Aaronia with callibration points for the frequency range you monitor so the data you see ends up being more correct based on the capabilites of the antenna. But, for this lab it is not that important.
 
@@ -21,21 +21,28 @@ The Spectra data is feeded into Histogram, Spectrum and Waterfall to help visual
 
 The **Spectum Condition Block** have three Frequency Masks that is added (change as needed) that will stream any data that enters these masks to a new waterfall block to show you any filtered data, and to a File Writer block. 
 
-(picture)
+![Spectrum_TDWR_Condition](https://github.com/KjetilTeigen/RTSA_Wi-Fi_Missions/blob/main/missions/TDWR_Mission/Spectrum_TDWR_Condition.png)
 
 ## How to use this mission
 
-_Hopefully you do not have any Wi-Fi radios using these channels (but I often do see cheap SoHo routers on these channels :( ) so the radar is not hidden (if any)_
+_Hopefully you do not have any Wi-Fi radios using these channels_
 
 Turn on and start the Spectran V6 from the menu, change to the IQ Rate you have available. I would recommend using 1/2 span so you do not get any DC spikes at the center of the center of the channel (https://v6-forum.aaronia.de/forum/topic/different-cw-power-displayed-in-full-span-compared-to-1-2-1-4-etc/). Depending on your IQ rate you could end up not seeing all channels, so change the Center Frequency to one of the channels, or use Full Span with a slighly chifted center frequency so you the DC spikse do not interfere the view of the frequency you are monitoring.
+
+![TDWR_grid](https://github.com/KjetilTeigen/RTSA_Wi-Fi_Missions/blob/main/missions/TDWR_Mission/grid.png)
 
 Press "Auto Ref Level" if you use any Amp and/or pre-amp. If you have any radar nearby on these channels you will clearly see a pulse at the center frequency at a few Mz, and if this signal rises above the thershold you will see it in the Waterfall Filtered view. 
 
 Start Record (after creating a save spot for the file at the "burger menu) and now ANY frequency that enters the Spectrum Condition Block will be recorded. 
 
-Look at this very short high pulse that I recorded "looping" in 3D File Reader Mission (remove IQ Power Spectrum from file reader when using Spectra Data).
+![TDWR_misson_record](https://github.com/KjetilTeigen/RTSA_Wi-Fi_Missions/blob/main/missions/TDWR_Mission/monitoring_in_action.png)
 
-(Picture)
+
+## Play back the recording
+
+To play back the recording, you can use the mission "2.4GHz_w_3D_Live.rmix" that I have uploaded, but since this is a Spectra record mission you will need to remove the **IQ Power Spectrum Block** and connect the File Reader Block directly to the RF Measurements Blocks.
+
+Have fun, and I hope you find any radar. If not, then maybe this mission can be used to record other things as well.
 
 
 
