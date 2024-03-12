@@ -40,9 +40,9 @@ Start Record (after creating a save spot for the file at the "burger menu) and n
 
 ## Play back the recording
 
-To play back the recording, you can use the mission "2.4GHz_w_3D_Live.rmix" that I have uploaded, but since this is a Spectra record mission you will need to remove the **IQ Power Spectrum Block** and connect the File Reader Block directly to the RF Measurements Blocks.
+To play back the recording, you can use the mission "2.4GHz_w_3D_Live.rmix" (see my Missons) that I have uploaded, but since this is a Spectra record mission you will need to remove the **IQ Power Spectrum Block** and connect the File Reader Block directly to the RF Measurements Blocks.
 
-Have fun, and I hope you find any radar. If not, then maybe this mission can be used to record other things as well.
+Have fun, and I hope you find a radar. If not, then this mission can be used to record other things as well.
 
 
 
